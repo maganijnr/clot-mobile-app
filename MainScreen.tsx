@@ -5,6 +5,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import SignInScreen from "./screens/SignInScreen";
 import SignUpScreen from "./screens/SignUpScreen";
 import TabBarNavigation from "./navigation/TabBarNavigation";
+import ForgotPasswordScreen from "./screens/ForgotPasswordScreen";
+import PasswordResetSuccessScreen from "./screens/PasswordResetSuccessScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +22,16 @@ const MainScreen = () => {
 				<Stack.Screen
 					name="SignUp"
 					component={SignUpScreen}
+					options={{ animation: "slide_from_bottom" }}
+				/>
+				<Stack.Screen
+					name="ForgotPassword"
+					component={ForgotPasswordScreen}
+					options={{ animation: "slide_from_bottom" }}
+				/>
+				<Stack.Screen
+					name="PasswordSuccess"
+					component={PasswordResetSuccessScreen}
 					options={{ animation: "slide_from_bottom" }}
 				/>
 				<Stack.Screen

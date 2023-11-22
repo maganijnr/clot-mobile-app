@@ -35,17 +35,20 @@ function AnimatedSplashScreen({ children }: any) {
 	}, []);
 
 	return (
+		//@ts-ignore
 		<View className="flex-1">
 			{isAppReady && children}
 			{!isSplashAnimationComplete && (
 				<Animated.View
 					entering={FadeIn.delay(100).springify()}
+					//@ts-ignore
 					className="flex-1 items-center justify-center bg-[#8E6CEF] w-full"
 				>
 					<Animated.Image
 						entering={FadeInUp.delay(300).springify()}
 						source={require("./assets/clot-logo.png")}
 						style={{ width: wp(30), height: hp(5) }}
+						//@ts-ignore
 						className="object-cover  mx-auto"
 					/>
 				</Animated.View>
